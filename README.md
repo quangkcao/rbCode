@@ -1,7 +1,9 @@
 # rbCode v1.1
 ###jQuery Plugin [DEMO](http://runbusi.com/script/rbcode/)
 Change the way of sharing codes in pre tag.
+
 ![rbcode](http://runbusi.com/upload/article/demo_rbcode_simple.jpg)
+
 ***
 ```javascript
 $('pre.code').rbCode();
