@@ -1,0 +1,275 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>rbCode</title>
+<meta name="keywords" content="higlighted code, numberize code line, hmtl code format, pre tag format, jquery plugin"/>
+<meta name="description" content="Change the way of sharing codes in pre tag"/>
+
+<link rel="SHORTCUT ICON" href="http://runbusi.com/favicon.ico" />
+<script type="text/javascript" src="http://runbusi.com/upload/file/jquery172.min.js"></script>
+<script type="text/javascript" src="http://runbusi.com/upload/script/rbcode/jquery.rbcode.min.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25284477-1']);
+  _gaq.push(['_setDomainName', '.runbusi.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="info" class="round_box" style="background:none; color:#999; text-align: center;">
+        <b style="font-size: 1.5em;">rbCode</b><br/>
+        <div style="font-size: 0.8em;">jQuery plugin</div><br/>
+        Change the way of sharing codes in <b>pre</b> tag.<br/>
+</div>
+<br/>
+<div class="content_wrapper">
+    <pre class="code">
+    &lt;pre class="code&gt;
+    With rbCode, code lines is different.
+    Click buttons at right-top corner to see effects
+    &lt;/pre&gt;
+    </pre>
+    <h3>Features</h3>
+    <ul>
+        <li>Box code lines</li>
+        <li>Zebra effect on code lines</li>
+        <li>Numberizes those code lines</li>
+        <li>Popout to the center of the window</li>
+    </ul>
+    <h3>Options</h3>
+    <div id="parameter">
+        <table border="1" cellpadding="5" style="border:1px solid #999; border-collapse: collapse;">
+            <tbody>
+                <tr>
+                    <th>
+                        Parameter</th>
+                    <th>
+                        Type</th>
+                    <th>
+                        Default Value</th>
+                    <th>
+                        Description</th>
+                </tr>
+                <tr>
+                    <td>
+                        is_number</td>
+                    <td>
+                        Boolean</td>
+                    <td>
+                        false</td>
+                    <td>
+                        indicate show number or not</td>
+                </tr>
+                <tr>
+                    <td>
+                        is_zebra</td>
+                    <td>
+                        Boolean</td>
+                    <td>
+                        false</td>
+                    <td>
+                        indicate show zebra effect or not</td>
+                </tr>
+                <tr>
+                    <td>
+                        zebra_bg</td>
+                    <td>
+                        String</td>
+                    <td>
+                        #CCC</td>
+                    <td>
+                        background of zebra effect</td>
+                </tr>
+                <tr>
+                    <td>
+                        zebra_cross_bg</td>
+                    <td>
+                        String</td>
+                    <td>
+                        #FFF</td>
+                    <td>
+                        background of zebra cross lines</td>
+                </tr>
+                <tr>
+                    <td>
+                        modal_bg</td>
+                    <td>
+                        String</td>
+                    <td>
+                        #000</td>
+                    <td>
+                        background of modal window</td>
+                </tr>
+                <tr>
+                    <td>
+                        bg</td>
+                    <td>
+                        String</td>
+                    <td>
+                        #CCC</td>
+                    <td>
+                        background of box</td>
+                </tr>
+                <tr>
+                    <td>
+                        text_color</td>
+                    <td>
+                        String</td>
+                    <td>
+                        #000</td>
+                    <td>
+                        text color</td>
+                </tr>
+                <tr>
+                    <td>
+                        list_color</td>
+                    <td>
+                        String</td>
+                    <td>
+                        #CCC</td>
+                    <td>
+                        color of list style such number</td>
+                </tr>
+                <tr>
+                    <td>
+                        z_index</td>
+                    <td>
+                        Integer</td>
+                    <td>
+                        999</td>
+                    <td>
+                        popout 999 and modal window 999-1</td>
+                </tr>
+                <tr>
+                    <td>
+                        opacity</td>
+                    <td>
+                        Number</td>
+                    <td>
+                        0.75</td>
+                    <td>
+                        transperancy of modal window</td>
+                </tr>
+                <tr>
+                    <td>
+                        a_number</td>
+                    <td>
+                        Array</td>
+                    <td>
+                        [&#39;Hide Number&#39;,&#39;Show Number&#39;,&#39;text&#39;]</td>
+                    <td>
+                        label Number button. Default type: 'text'. If wanted image button, change to [url,url,'image']</td>
+                </tr>
+                <tr>
+                    <td>
+                        a_zebra</td>
+                    <td>
+                        Array</td>
+                    <td>
+                        [&#39;Hide Zebra&#39;,&#39;Show Zebra&#39;,&#39;text&#39;]</td>
+                    <td>
+                        label Zebra button. Default type: 'text'. If wanted image button, change to [url,url,'image']</td>
+                </tr>
+                <tr>
+                    <td>
+                        a_popout</td>
+                    <td>
+                        Array</td>
+                    <td>
+                        [&#39;Pop Out&#39;,&#39;Close&#39;,&#39;text&#39;]</td>
+                    <td>
+                        label Popout button. Default type: 'text'. If wanted image button, change to [url,url,'image']</td>
+                </tr>
+            </tbody>
+        </table>
+            </div>
+    <h3>Custom Style</h3>
+    <pre class="code1">
+    &lt;pre class="code&gt;
+    You can change it to different color or modal window color by edit parameters.
+    &lt;/pre&gt;
+    &lt;script type="text/javascript"&gt;
+    $('pre.code').rbCode({zebra_bg:'#D4E5E5',
+                        zebra_cross_bg:'#FFF',
+                        modal_bg:'#D4E5E5',
+                        bg:'#D4E5E5',
+                        opacity: 0.5,
+                        a_number:['http://runbusi.com/upload/article/number.png',
+                                    'http://runbusi.com/upload/article/number.png',
+                                'image'
+                                ],
+                        a_zebra:['http://runbusi.com/upload/article/zebra.png',
+                                'http://runbusi.com/upload/article/zebra.png',
+                                'image'
+                                ],
+                        a_popout:['http://runbusi.com/upload/article/popout.png',
+                                    'http://runbusi.com/upload/article/close.png',
+                                'image'
+                                ],
+                        text_color:'#336699'
+                        })
+    &lt;/script&gt;
+    </pre>
+    <pre class="code2">
+    &lt;pre class="code&gt;
+    Base on the 'background' attribute in CSS, you can change background of image.
+    &lt;/pre&gt;
+    &lt;script type="text/javascript"&gt;
+    $('pre.code').rbCode({zebra_bg:'#D4E5E5',
+                        zebra_cross_bg:'#FFF',
+                        modal_bg:'#D4E5E5',
+                        bg:'url(http://runbusi.com/upload/article/rose.jpg)',
+                        opacity: 0.5,
+                        a_number:['http://runbusi.com/upload/article/number.png',
+                                    'http://runbusi.com/upload/article/number.png',
+                                'image'
+                                ],
+                        a_zebra:['http://runbusi.com/upload/article/zebra.png',
+                                'http://runbusi.com/upload/article/zebra.png',
+                                'image'
+                                ],
+                        a_popout:['http://runbusi.com/upload/article/popout.png',
+                                    'http://runbusi.com/upload/article/close.png',
+                                'image'
+                                ],
+                        text_color:'#336699'
+                        })
+    &lt;/script&gt;
+    </pre>
+    <p><strong>Tested Browsers</strong></p>
+    <img alt="firefox" src="http://runbusi.com/upload/article/firefox.png" /> <img alt="safari" src="http://runbusi.com/upload/article/safari.png" /> <img alt="opera" src="http://runbusi.com/upload/article/opera.png" /> <img alt="google_chrome" src="http://runbusi.com/upload/article/google_chrome.png" /> <img alt="ie" src="http://runbusi.com/upload/article/ie.png" />8&uarr;
+    <script type="text/javascript">
+    $('pre.code').rbCode();
+    $('pre.code1').rbCode({zebra_bg:'#D4E5E5',zebra_cross_bg:'#FFF',modal_bg:'#D4E5E5', bg:'#D4E5E5',opacity: 0.5, a_number:['http://runbusi.com/upload/article/number.png','http://runbusi.com/upload/article/number.png','image'],a_zebra:['http://runbusi.com/upload/article/zebra.png','http://runbusi.com/upload/article/zebra.png','image'],a_popout:['http://runbusi.com/upload/article/popout.png','http://runbusi.com/upload/article/close.png','image'], text_color:'#336699'})
+    $('pre.code2').rbCode({zebra_bg:'#D4E5E5',zebra_cross_bg:'#FFF',modal_bg:'#D4E5E5',bg:'url(http://runbusi.com/upload/article/rose.jpg)',opacity: 0.5, a_number:['http://runbusi.com/upload/article/number.png','http://runbusi.com/upload/article/number.png','image'],a_zebra:['http://runbusi.com/upload/article/zebra.png','http://runbusi.com/upload/article/zebra.png','image'],a_popout:['http://runbusi.com/upload/article/popout.png','http://runbusi.com/upload/article/close.png','image'], text_color:'#336699'})
+
+    </script>
+</div>
+   <script type="text/javascript"><!--
+google_ad_client = "ca-pub-6307502785605369";
+/* small2 */
+google_ad_slot = "0150615081";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</body>
+</html>
+
+
+
+	
